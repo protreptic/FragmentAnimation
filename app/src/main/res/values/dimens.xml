@@ -1,0 +1,16 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Default check view -->
+    <dimen name="checkview_compat_inset_shadow">0dp</dimen>
+    <dimen name="checkview_corner_radius">3dp</dimen>
+    <dimen name="checkview_elevation">2dp</dimen>
+    <dimen name="checkview_max_elevation">2dp</dimen>
+    <dimen name="checkview_content_padding">0dp</dimen>
+    <dimen name="checkview_content_padding_left">0dp</dimen>
+    <dimen name="checkview_content_padding_top">0dp</dimen>
+    <dimen name="checkview_content_padding_right">0dp</dimen>
+    <dimen name="checkview_content_padding_bottom">0dp</dimen>
+</resources>

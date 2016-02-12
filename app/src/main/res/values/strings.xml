@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FragmentAnimation</string>
+    <string name="trip_price">Стоимость поездки</string>
+    <string name="to_pay">К оплате</string>
+</resources>

@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CheckView">
+        <item name="checkBackgroundColor">@android:color/white</item>
+        <item name="checkCornerRadius">@dimen/checkview_corner_radius</item>
+        <item name="checkElevation">@dimen/checkview_elevation</item>
+        <item name="checkMaxElevation">@dimen/checkview_max_elevation</item>
+        <item name="checkUseCompatPadding">false</item>
+        <item name="checkPreventCornerOverlap">false</item>
+        <item name="checkContentPadding">@dimen/checkview_content_padding</item>
+        <item name="checkContentPaddingLeft">@dimen/checkview_content_padding_left</item>
+        <item name="checkContentPaddingTop">@dimen/checkview_content_padding_top</item>
+        <item name="checkContentPaddingRight">@dimen/checkview_content_padding_right</item>
+        <item name="checkContentPaddingBottom">@dimen/checkview_content_padding_bottom</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="TextAppearanceBody1" parent="TextAppearance.AppCompat.Body1"/>
+    <style name="TextAppearanceBody2" parent="TextAppearance.AppCompat.Body2"/>
+
+</resources>

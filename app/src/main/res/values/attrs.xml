@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CheckView">
+        <attr name="checkBackgroundColor" format="color"/>
+        <attr name="checkCornerRadius" format="dimension"/>
+        <attr name="checkElevation" format="dimension"/>
+        <attr name="checkMaxElevation" format="dimension"/>
+        <attr name="checkUseCompatPadding" format="boolean"/>
+        <attr name="checkPreventCornerOverlap" format="boolean"/>
+        <attr name="checkContentPadding" format="dimension"/>
+        <attr name="checkContentPaddingLeft" format="dimension"/>
+        <attr name="checkContentPaddingTop" format="dimension"/>
+        <attr name="checkContentPaddingRight" format="dimension"/>
+        <attr name="checkContentPaddingBottom" format="dimension"/>
+    </declare-styleable>
+</resources>
