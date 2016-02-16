@@ -9,33 +9,16 @@ import android.content.Context;
  */
 public interface CheckViewImpl {
 
-    void initialize(CheckViewDelegate cardView, Context context, int backgroundColor, float radius,
-                    float elevation, float maxElevation);
+    void initialize(CheckViewDelegate delegate, Context context, int size, int backgroundColor);
 
-    void setRadius(CheckViewDelegate cardView, float radius);
+    float getMinWidth(CheckViewDelegate delegate);
 
-    float getRadius(CheckViewDelegate cardView);
+    float getMinHeight(CheckViewDelegate delegate);
 
-    void setElevation(CheckViewDelegate cardView, float elevation);
+    void updatePadding(CheckViewDelegate delegate);
 
-    float getElevation(CheckViewDelegate cardView);
+    void onCompatPaddingChanged(CheckViewDelegate delegate);
 
-    void initStatic();
-
-    void setMaxElevation(CheckViewDelegate cardView, float maxElevation);
-
-    float getMaxElevation(CheckViewDelegate cardView);
-
-    float getMinWidth(CheckViewDelegate cardView);
-
-    float getMinHeight(CheckViewDelegate cardView);
-
-    void updatePadding(CheckViewDelegate cardView);
-
-    void onCompatPaddingChanged(CheckViewDelegate cardView);
-
-    void onPreventCornerOverlapChanged(CheckViewDelegate cardView);
-
-    void setBackgroundColor(CheckViewDelegate cardView, int color);
+    void setBackgroundColor(CheckViewDelegate delegate, int color);
 
 }

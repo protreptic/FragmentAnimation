@@ -12,5 +12,6 @@
         <attr name="checkContentPaddingTop" format="dimension"/>
         <attr name="checkContentPaddingRight" format="dimension"/>
         <attr name="checkContentPaddingBottom" format="dimension"/>
+        <attr name="checkSize" format="integer"/>
     </declare-styleable>
 </resources>

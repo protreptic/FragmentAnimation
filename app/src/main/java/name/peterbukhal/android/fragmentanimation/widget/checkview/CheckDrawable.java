@@ -11,47 +11,45 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 
 /**
- * Created on 12/02/16 12:12 by
+ * Created on 15/02/16 12:57 by
  *
  * @author Peter Bukhal (petr@taxik.ru)
  */
-class RoundRectDrawable extends Drawable {
-private float mRadius;
-private final Paint mPaint;
-private final RectF mBoundsF;
-private final Rect mBoundsI;
-private float mPadding;
-private boolean mInsetForPadding = false;
-private boolean mInsetForRadius = true;
+public class CheckDrawable extends Drawable {
+    private float mRadius;
+    private final Paint mPaint;
+    private final RectF mBoundsF;
+    private final Rect mBoundsI;
+    private float mPadding;
+    private boolean mInsetForPadding = false;
+    private boolean mInsetForRadius = true;
 
-public RoundRectDrawable(int backgroundColor, float radius) {
-    mRadius = radius;
-    mPaint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG);
-    mPaint.setColor(backgroundColor);
-    mBoundsF = new RectF();
-    mBoundsI = new Rect();
-}
-
-void setPadding(float padding, boolean insetForPadding, boolean insetForRadius) {
-    if (padding == mPadding && mInsetForPadding == insetForPadding &&
-            mInsetForRadius == insetForRadius) {
-        return;
+    public CheckDrawable(int backgroundColor, float radius) {
+        mRadius = radius;
+        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG);
+        mPaint.setColor(backgroundColor);
+        mBoundsF = new RectF();
+        mBoundsI = new Rect();
     }
-    mPadding = padding;
-    mInsetForPadding = insetForPadding;
-    mInsetForRadius = insetForRadius;
-    updateBounds(null);
-    invalidateSelf();
-}
 
-float getPadding() {
-    return mPadding;
-}
+    void setPadding(float padding, boolean insetForPadding) {
+        if (padding == mPadding && mInsetForPadding == insetForPadding) {
+            return;
+        }
+        mPadding = padding;
+        mInsetForPadding = insetForPadding;
+        updateBounds(null);
+        invalidateSelf();
+    }
 
-@Override
-public void draw(Canvas canvas) {
-    canvas.drawRoundRect(mBoundsF, mRadius, mRadius, mPaint);
-}
+    float getPadding() {
+        return mPadding;
+    }
+
+    @Override
+    public void draw(Canvas canvas) {
+        canvas.drawRoundRect(mBoundsF, mRadius, mRadius, mPaint);
+    }
 
     private void updateBounds(Rect bounds) {
         if (bounds == null) {
@@ -80,15 +78,6 @@ public void draw(Canvas canvas) {
         outline.setRoundRect(mBoundsI, mRadius);
     }
 
-    void setRadius(float radius) {
-        if (radius == mRadius) {
-            return;
-        }
-        mRadius = radius;
-        updateBounds(null);
-        invalidateSelf();
-    }
-
     @Override
     public void setAlpha(int alpha) {
         // not supported because older versions do not support
@@ -104,12 +93,9 @@ public void draw(Canvas canvas) {
         return PixelFormat.TRANSLUCENT;
     }
 
-    public float getRadius() {
-        return mRadius;
-    }
-
     public void setColor(int color) {
         mPaint.setColor(color);
         invalidateSelf();
     }
+
 }

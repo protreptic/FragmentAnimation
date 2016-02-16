@@ -3,23 +3,24 @@
     android:id="@+id/scrollVew"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#eeaa33"
+    android:fillViewport="false">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:layout_marginTop="-5dp">
+        android:paddingRight="8dp">
 
-        <name.peterbukhal.android.fragmentanimation.widget.checkview.CheckView
+        <name.peterbukhal.android.fragmentanimation.CheckView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="24dp"
+                android:paddingBottom="32dp"
                 android:paddingLeft="0dp"
                 android:paddingRight="0dp"
                 android:paddingTop="24dp">
@@ -85,7 +86,7 @@
                     android:textColor="@color/colorTextAccent"
                     android:textSize="20sp"/>
             </RelativeLayout>
-        </name.peterbukhal.android.fragmentanimation.widget.checkview.CheckView>
+        </name.peterbukhal.android.fragmentanimation.CheckView>
 
     </LinearLayout>
 
